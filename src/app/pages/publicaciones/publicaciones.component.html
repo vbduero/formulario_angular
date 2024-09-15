@@ -1,0 +1,13 @@
+<p>publicaciones works!</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let elemento of losdatos">
+        <h2> {{ elemento.title }}</h2>
+        <p> {{elemento.body }}</p>
+    </li>
+</ul>
+<div>
+    <h3>Agregar nueva publicación</h3>
+    <input [(ngModel)]="nuevoDato.title" placeholder="Título" class="form-control mb-2" />
+    <textarea [(ngModel)]="nuevoDato.body" placeholder="Contenido" class="form-control mb-2"></textarea>
+    <button (click)="enviarDatos()" class="btn btn-primary">Enviar</button>
+  </div>
